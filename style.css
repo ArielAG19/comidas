@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(270deg, #51e2fc, hsl(281, 100%, 73%), #8931ee);
+    background-size: 600% 600%;
+    animation: fondoMovimiento 10s ease infinite;
+  }
+  
+  @keyframes fondoMovimiento {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+
+header {
+    background: url('imagenes/BANNER.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 4em 0; /* Aumenté el padding para mayor espacio */
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+button {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin: 15px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5722;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.comida {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 250px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.comida img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+#carrito-container {
+    background: linear-gradient(to right, #43e9ff, #7651ff); /* Gradiente suave */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+
+
+
+.oculto {
+    display: none;
+}
