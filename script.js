@@ -17,7 +17,7 @@ const comidas = [
         descripcion: "torta de chocolate rellena con dulce de leche.",
         imagen: "imagenes/torta.avif"
     }
-    // Podés agregar más comidas aquí
+    // aca se agregan las comidas
   ];
   
   const carrito = [];
@@ -54,7 +54,7 @@ const comidas = [
     }
   
     const texto = carrito.map(c => `${c.nombre} - $${c.precio}`).join('\n');
-    const url = `https://wa.me/5492974217228?text=${encodeURIComponent("Hola! Quiero hacer este pedido:\n" + texto)}`;
+    const url = `https://wa.me/542974?text=${encodeURIComponent("Hola! Quiero hacer este pedido:\n" + texto)}`;
     window.open(url, '_blank');
   });
-  
+  // en consturl donde dice 542974 va el num de celu de whatsapp al que queres enviar el pedido
