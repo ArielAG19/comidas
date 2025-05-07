@@ -2,20 +2,21 @@ body {
     background: linear-gradient(270deg, #51e2fc, hsl(281, 100%, 73%), #8931ee);
     background-size: 600% 600%;
     animation: fondoMovimiento 10s ease infinite;
-  }
-  
-  @keyframes fondoMovimiento {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes fondoMovimiento {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-  }
-  
+}
 
 header {
     background: url('imagenes/BANNER.jpg') no-repeat center center;
     background-size: cover;
     color: white;
-    padding: 4em 0; /* Aumenté el padding para mayor espacio */
+    padding: 4em 0;
     text-align: center;
     position: relative;
 }
@@ -23,7 +24,7 @@ header {
 header h1 {
     font-size: 3em;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 button {
@@ -56,6 +57,11 @@ main {
     width: 250px;
     overflow: hidden;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.comida:hover {
+    transform: scale(1.05);
 }
 
 .comida img {
@@ -65,15 +71,66 @@ main {
 }
 
 #carrito-container {
-    background: linear-gradient(to right, #43e9ff, #7651ff); /* Gradiente suave */
+    background: linear-gradient(to right, #43e9ff, #7651ff);
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
 
+    button {
+        padding: 10px 25px;
+        font-size: 1em;
+    }
 
+    .comida {
+        width: 100%;
+        max-width: 300px; /* Asegura que no se estire demasiado */
+    }
 
-.oculto {
-    display: none;
+    main {
+        padding: 10px;
+    }
+
+    #carrito-container {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .comida {
+        width: 100%;
+        max-width: 90%; /* Se adapta más en pantallas pequeñas */
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+
+    #carrito-container {
+        padding: 10px;
+    }
+}
+
+/* Para asegurar que todo se vea bien en pantallas muy pequeñas */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .comida {
+        width: 100%;
+        max-width: 90%;
+    }
 }
